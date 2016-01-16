@@ -7,9 +7,10 @@ angular.module('insight.system').controller('HeaderController',
     $rootScope.currency = {
       factor: 1,
       bitstamp: 0,
-      symbol: process.env['BITCORE_COIN'] || 'BTC',
-      msymbol: (process.env['BITCORE_COIN'] ? 'm' + process.env['BITCORE_COIN'] : 'mBTC')
+      psymbol: process.env['BITCORE_COIN'] || 'BTC'
     };
+    $rootScope.currency.msymbol = 'm' + $rootScope.currency.psymbol;
+    $rootScope.currency.symbol = $rootScope.currency.psymbol;
 
     $scope.menu = [{
       'title': 'Blocks',

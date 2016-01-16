@@ -6,7 +6,7 @@
   <a href="#" data-ng-click="setCurrency('USD')" data-ng-class="{active: currency.symbol == 'USD'}">USD</a>
   </li>
   <li>
-  <a href="#" data-ng-click="setCurrency(currency.symbol)" data-ng-class="{active: currency.symbol == 'BTC'}">{{currency.symbol}}</a>
+  <a href="#" data-ng-click="setCurrency(currency.psymbol)" data-ng-class="{active: currency.symbol == currency.psymbol}">{{currency.psymbol}}</a>
   </li>
   <li>
   <a href="#" data-ng-click="setCurrency(currency.msymbol)" data-ng-class="{active: currency.symbol == currency.msymbol}">{{currency.msymbol}}</a>
