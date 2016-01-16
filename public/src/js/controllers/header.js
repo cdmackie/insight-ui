@@ -6,12 +6,15 @@ angular.module('insight.system').controller('HeaderController',
 
     $rootScope.currency = {
       factor: 1,
-      bitstamp: 0,
-      psymbol: 'DOGE',
-      name: "Dogecoin"
+      bitstamp: 0
     };
-    $rootScope.currency.msymbol = 'm' + $rootScope.currency.psymbol;
-    $rootScope.currency.symbol = $rootScope.currency.psymbol;
+    if (!$rootScope.currency.psymbol)
+    {
+      $rootScope.currency.psymbol = 'BTC';
+      $rootScope.currency.msymbol = 'm' + $rootScope.currency.psymbol;
+      $rootScope.currency.symbol = $rootScope.currency.psymbol;
+      $rootScope.currency.name = 'Bitcoin';
+    }
 
     $scope.menu = [{
       'title': 'Blocks',

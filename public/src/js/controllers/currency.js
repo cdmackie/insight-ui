@@ -57,7 +57,7 @@ angular.module('insight.currency').controller('CurrencyController',
         $rootScope.currency.symbol = res.data.net.symbol;
         $rootScope.currency.psymbol = res.data.net.symbol;
         $rootScope.currency.msymbol = 'm' + res.data.net.symbol;
-        $rootScope.currency.name = res.data.net.symbol.coinname;
+        $rootScope.currency.name = res.data.net.coinname;
       }
     });
 
