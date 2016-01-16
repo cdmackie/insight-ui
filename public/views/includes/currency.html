@@ -2,7 +2,7 @@
   {{currency.symbol}} <span class="caret"></span>
 </a>
 <ul class="dropdown-menu">
-  <li>
+  <li ng-if="$root.currency.psymbol=='BTC'">
   <a href="#" data-ng-click="setCurrency('USD')" data-ng-class="{active: currency.symbol == 'USD'}">USD</a>
   </li>
   <li>
