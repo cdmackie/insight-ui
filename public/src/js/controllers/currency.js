@@ -52,6 +52,13 @@ angular.module('insight.currency').controller('CurrencyController',
     // Get initial value
     Currency.get({}, function(res) {
       $rootScope.currency.bitstamp = res.data.bitstamp;
+      if (res.data.net)
+      {
+        $rootScope.currency.symbol = res.data.net.symbol;
+        $rootScope.currency.psymbol = res.data.net.symbol;
+        $rootScope.currency.msymbol = 'm' + res.data.net.symbol;
+        $rootScope.currency.name = res.data.net.symbol.coinname;
+      }
     });
 
   });
