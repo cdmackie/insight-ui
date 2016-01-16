@@ -7,7 +7,7 @@ angular.module('insight.system').controller('HeaderController',
     $rootScope.currency = {
       factor: 1,
       bitstamp: 0,
-      psymbol: process.env['BITCORE_COIN'] || 'BTC'
+      psymbol: 'DOGE'
     };
     $rootScope.currency.msymbol = 'm' + $rootScope.currency.psymbol;
     $rootScope.currency.symbol = $rootScope.currency.psymbol;
